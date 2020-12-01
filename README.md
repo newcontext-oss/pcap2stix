@@ -5,7 +5,7 @@ This is a testing tool for generating STIXv2.1 observables from PCAP data.
 ## Files
 
 ### pcap2stix.py
-Test tool for converting PCAP data to STIXv2 observables. Currently supports processing both live captures and files. This tool identifies all TCP and UDP packets, extracts source and destination addresses and ports along with the binary payload and creates a STIXv2 observable. This observable can then be submitted to Elasticsearch. 
+Test tool for converting PCAP data to STIXv2 observables. Currently supports processing both live captures and files. This tool identifies all TCP and UDP packets, extracts source and destination addresses and ports along with the binary payload and creates a STIXv2 observable. This observable can then be submitted to Elasticsearch or output to STDOUT.
 
 ```
 Usage: pcap2stix.py -i <iface> [-cd]
@@ -20,7 +20,7 @@ Options:
  -t <tlp_level>, --tlp=<tlp_level>    - enable and define TLP level for observables
 ```
 
-By default, `payload_bin` is encoded as hexadecimal byte value strings in order to be indexed by elasticsearch. If standard STIXv2.1 encoded is required, the `--base64` option can be used.
+By default, `payload_bin` is encoded as hexadecimal byte value strings in order to be indexed by elasticsearch. If standard STIXv2 base-64 encoding is required, the `--base64` option can be used.
 
 Valid Traffic Light Protocol (TLP) levels are `white`, `green`, `amber`, and `red`.
 
