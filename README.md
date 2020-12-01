@@ -2,6 +2,10 @@
 
 This is a testing tool for generating STIXv2 observables from PCAP data. 
 
+## Dependencies
+
+An installation of Wireshark version 3.4.0 or greater with 'tshark' in the path is required.
+
 ## Files
 
 ### pcap2stix.py
@@ -25,7 +29,6 @@ By default, `payload_bin` is encoded as hexadecimal byte value strings in order 
 Valid Traffic Light Protocol (TLP) levels are `white`, `green`, `amber`, and `red`.
 
 ### mapping.txt
-These commands should be run when setting up the Elasticsearch instance to force nanosecond precision on the `created`, `first_seen`, and `last_seen` timestamps when they are imported. 
-
+Miscellaneous commands to properly set up the Elasticsearch database. This forces nanosecond precision on the `created`, `first_seen`, and `last_seen` timestamps when they are imported in to Elasticsearch. 
 
 Copyright &copy; 2019, 2020 - New Context Services, Inc.
