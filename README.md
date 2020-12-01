@@ -1,6 +1,6 @@
 # pcap2stix
 
-This is a testing tool for generating STIXv2.1 observables from PCAP data. 
+This is a testing tool for generating STIXv2 observables from PCAP data. 
 
 ## Files
 
@@ -25,7 +25,7 @@ By default, `payload_bin` is encoded as hexadecimal byte value strings in order 
 Valid Traffic Light Protocol (TLP) levels are `white`, `green`, `amber`, and `red`.
 
 ### mapping.txt
-This forces nanosecond precision on the `created`, `first_seen`, and `last_seen` timestamps when they are imported in to Elasticsearch. 
+These commands should be run when setting up the Elasticsearch instance to force nanosecond precision on the `created`, `first_seen`, and `last_seen` timestamps when they are imported. 
 
 
 Copyright &copy; 2019, 2020 - New Context Services, Inc.
