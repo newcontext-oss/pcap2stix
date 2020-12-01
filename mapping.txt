@@ -1,0 +1,21 @@
+curl -XPOST 'http://localhost:9200/index/stix/'
+curl -XPOST 'http://localhost:9200/index/stix/' -H "Content-Type: application/json" -d '
+{
+    "mappings": {
+      "stix_timestamp" : {
+        "properties": {
+            "created": {
+              "type": "date_nanos"
+            },
+            "first_seen": {
+              "type": "date_nanos"
+            },
+            "last_seen": {
+              "type": "date_nanos"
+            }
+
+          }
+      }
+  }
+}
+'
